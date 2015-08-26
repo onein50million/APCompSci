@@ -8,7 +8,6 @@ public class Chapter2_7 {
 	public static void main(String[] args) {
 		GregorianCalendar date = new GregorianCalendar();
 		GregorianCalendar birthday = new GregorianCalendar(1998, Calendar.APRIL, 8);
-		
 		SimpleDateFormat dateformat = new SimpleDateFormat("dd MMMM YYYY");
 		SimpleDateFormat weekdayDate = new SimpleDateFormat("EEEE, dd MMMM YYYY");
 		SimpleDateFormat weekday = new SimpleDateFormat("EEEE");
