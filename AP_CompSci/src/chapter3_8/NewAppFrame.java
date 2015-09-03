@@ -114,7 +114,8 @@ public class NewAppFrame extends JFrame {
 								voter.addDemocrat();
 //								System.exit(0);
 								
-							} else if(button.getText() == "Republican"){
+							}
+							else if(button.getText() == "Republican"){
 								
 								voter.addRepublican();
 //								System.exit(0);
@@ -132,7 +133,7 @@ public class NewAppFrame extends JFrame {
 		JButton btnGetVotes = new JButton("Get Votes");
 		btnGetVotes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(getContentPane(), "Democrat Votes:" + voter.getDemocrat() + "\nRepublican Votes: " + voter.getRepublican());
+				JOptionPane.showMessageDialog(getContentPane(), "Democrat Votes: " + voter.getDemocrat() + "\nRepublican Votes: " + voter.getRepublican());
 			}
 		});
 		btnGetVotes.setBounds(299, 31, 89, 23);
