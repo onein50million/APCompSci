@@ -1,12 +1,5 @@
 public class AlphabetDistance {
 
-	public static void main(String[] args) {
-
-		
-		
-	}
-	
-	
 	public static void distance(String input) {
 		input = input.toUpperCase();
 		String inputSplit[] = input.split(" ");
