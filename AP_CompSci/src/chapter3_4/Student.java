@@ -3,7 +3,7 @@ package chapter3_4;
 public class Student {
 	
 	String name;
-	int score;
+	float score;
 	int quizCount;
 	
 	public Student(String name, int score, int quizCount){
@@ -27,7 +27,7 @@ public class Student {
 		
 	}
 	
-	public int getTotalScore() {
+	public float getTotalScore() {
 
 		return this.score;
 		

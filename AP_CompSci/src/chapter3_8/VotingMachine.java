@@ -37,7 +37,7 @@ public class VotingMachine {
 	 * @return number of Republican votes
 	 */
 	public int getRepublican() {
-		return republican;
+		return republican;	
 	}
 	/**
 	 * @return number of Democrat votes
