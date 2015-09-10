@@ -4,7 +4,7 @@ public class Tester {
 
 	public static void main(String[] args) {
 
-		 		BankAccount USTreasury = new BankAccount(23.52);
+		 		BankAccount USTreasury = new BankAccount(23.52, 3, 1);
 		 		System.out.println(USTreasury.getBalance());
 		 		USTreasury.withdraw(5);
 		 		for (int i = 0; i < 5; i++) {

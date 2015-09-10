@@ -5,12 +5,14 @@ public class BankAccount {
 	double balance;
 	
 	int monthlyTransactions = 0;
-	int freeTransactions = 3;
-	int fee = 1;
+	int freeTransactions;
+	double fee;
 	
-	public BankAccount(double balance) {
+	public BankAccount(double balance, int freeTransactions, double fee) {
 		
 		this.balance = balance;
+		this.freeTransactions = freeTransactions;
+		this.fee = fee;
 		
 	}
 	
