@@ -7,18 +7,18 @@ package chapter3_1;
  */
 public class CashRegister {
 	
-	private int purchase = 0;
-	private int payment = 0;
+	private float purchase = 0;
+	private float payment = 0;
 	
 	private float tax = 0;
-	private int taxCost = 0;
+	private float taxCost = 0;
 	private int purchasedItems = 0;
-	private int change = 0;
+	private float change = 0;
 
 	/**
 	 * @param  tax in percent
 	 */
-	public CashRegister(int tax){
+	public CashRegister(float tax){
 		
 		this.tax = tax/100f;
 		
@@ -38,9 +38,9 @@ public class CashRegister {
 	 */
 	public void recordTaxablePurchase(int cents) {
 		
-		purchase += cents;
-		purchase += Math.round((float)cents*tax);
+		purchase += Math.round((float)cents*(tax+1f));
 		taxCost += Math.round((float)cents*tax);
+		purchasedItems++;
 		
 	}
 	
@@ -48,9 +48,7 @@ public class CashRegister {
 	 * @param  amount paid
 	 */
 	public void receivePayment(int cents) {
-		
 		payment += cents;
-		
 	}
 	
 	/**
@@ -60,10 +58,11 @@ public class CashRegister {
 	public int getChange(){
 		
 		if (payment >= purchase) {
+			
 			change = payment - purchase;
 			payment = 0;
 			purchase = 0;
-			return change;
+			return Math.round(change);
 		} else {
 			System.out.println("No");
 			return 0;
@@ -84,7 +83,7 @@ public class CashRegister {
 	 */
 	public int getTotalTax(){
 
-		return taxCost;
+		return Math.round(taxCost);
 		
 	}
 	
