@@ -7,8 +7,6 @@ import javax.swing.JOptionPane;
 
 public class Chapter4_2 {
 
-	int year = 2016;
-
 	
 	public static void main(String[] args) {
 		
