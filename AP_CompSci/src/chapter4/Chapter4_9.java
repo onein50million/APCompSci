@@ -19,7 +19,7 @@ public class Chapter4_9 {
 		double month2 = balance * Math.pow(1d+interest/frequency, frequency*(2d/12d));
 		double month3 = balance * Math.pow(1d+interest/frequency, frequency*(3d/12d));
 		
-		System.out.printf("First Month: $%.2f\nSecond Month: $%.2f\nThird Month: $%.2f", month1,month2,month3);
+		System.out.printf("First Month:  $%.2f\nSecond Month: $%.2f\nThird Month:  $%.2f", month1,month2,month3);
 
 		
 		
