@@ -2,13 +2,20 @@ package password;
 import javax.swing.JPanel;
 
 import java.awt.GridBagLayout;
+
 import javax.swing.JButton;
+
+import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
+
+import chapter3_8.NewAppFrame;
+
 import java.awt.Font;
 
 
@@ -31,11 +38,18 @@ public class passTest extends JPanel {
 	char[] chars5 = {'a','b','c','d','e'};
 
 	
-//	public void main(String[] args){
-//		
-//		passTest window = new passTest();
-//		
-//	}
+	public void main(String[] args){
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					passTest frame = new passTest();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	
 	public passTest() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
