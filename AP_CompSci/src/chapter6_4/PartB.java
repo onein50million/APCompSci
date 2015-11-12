@@ -1,10 +1,11 @@
 package chapter6_4;
 
-//invisible code(white text)
+import java.util.Scanner;
+
 public class PartB {
 
 	public static void main(String[] args) {
-
+		
 		int length = 5;
 		// filled
 		for (int i = 0; i < length; i++) {
