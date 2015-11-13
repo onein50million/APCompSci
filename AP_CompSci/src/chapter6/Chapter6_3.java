@@ -21,8 +21,6 @@ public class Chapter6_3 {
 			System.out.println(gcd(Math.abs(list.get(i)-list.get(i*2)),input));
 
 		}
-		for(i = 0; i*2<list.size();i++){
-		}
 
 	}
 
