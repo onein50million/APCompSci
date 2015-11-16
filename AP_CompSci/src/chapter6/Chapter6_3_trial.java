@@ -11,12 +11,19 @@ public class Chapter6_3_trial {
 		long input = scan.nextLong();
 		scan.close();
 		System.out.println("factors:");
+		long start = System.currentTimeMillis();
+		if(primeCheck(input)){
+			System.out.println("prime");
+			return;
+		}
 		while(true){
 			for(int i = 2; i <= Math.sqrt(input);i++){				
 				if(primeCheck(i) && input%i == 0){
 					if(primeCheck(input/i)){
 						System.out.println(i);
 						System.out.println(input/i);
+						long end = System.currentTimeMillis();
+						System.out.println("time: "+ (end-start));
 						return;
 					}
 					System.out.println(i);
@@ -25,8 +32,7 @@ public class Chapter6_3_trial {
 				}
 			}
 			
-		}
-
+		}	
 	}
 
 
