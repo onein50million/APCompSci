@@ -2,18 +2,19 @@ package chapter6;
 
 import java.util.Scanner;
 
-public class Chapter6_3 {
+public class Chapter6_3_pollard {
 	
 
 	public static void main(String[] args) {
 
-	
+
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter an integer: ");
 		long input = scan.nextLong();
 		scan.close();
 		System.out.println("factors:");
 		factor(input,2,2);
+
 	}
 
 	public static long f(long x){
