@@ -107,9 +107,6 @@ public class Magpie2
 		else if(whichResponse == 5){
 			response = "Not sure";			
 		}
-		else if(whichResponse == 6){
-			response = secret.secret;
-		}
 
 		return response;
 	}
