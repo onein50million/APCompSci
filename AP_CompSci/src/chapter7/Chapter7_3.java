@@ -6,12 +6,12 @@ public class Chapter7_3 {
 
 	public static void main(String[] args) {
 		double[] array = {8, 4, 5, 21, 7, 9, 18, 2, 100};
-		array = rotN(array,9);
+		array = rotN(array,3);
 		System.out.println(Arrays.toString(array));
 		
 	}
-	private static <T> T[] rotN(T[] array, int rotNum){
-		T[] newArray = array.clone();
+	private static double[] rotN(double[] array, int rotNum){
+		double[] newArray = array.clone();
 		for(int i = 0; i<array.length;i++){
 			newArray[(i+rotNum)%array.length] = array[i];
 		}
