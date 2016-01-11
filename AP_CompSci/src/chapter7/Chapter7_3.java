@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Chapter7_3 {
 
 	public static void main(String[] args) {
-		double[] array = {8, 4, 5, 21, 7, 9, 18, 2, 100};
+		int[] array = {8, 4, 5, 21, 7, 9, 18, 2, 100};
 		array = rotN(array,9);
 		System.out.println(Arrays.toString(array));
 		
