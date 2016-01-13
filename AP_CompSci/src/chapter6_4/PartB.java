@@ -6,7 +6,7 @@ public class PartB {
 
 	public static void main(String[] args) {
 		
-		int length = 5;
+		int length = 1000;
 		// filled
 		for (int i = 0; i < length; i++) {
 
