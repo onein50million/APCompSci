@@ -21,15 +21,20 @@ public class Table {
 		values[i][j] = n;
 	}
 	public double neighbourAverage(int row, int column){
-		int sum = 0;
-		for(int i = -1; i < 2; i++){
-			for(int j = -1; j < 2; j++){
-				if(row+i >=0 && row+i <= values[0].length && column+j >= 0 && column+j <= values.length ){
-					sum += values[row+i][column+j];
+		double sum = 0;
+		int count = 0;
+		for(int i = -1; i <= 1; i++){
+			for(int j = -1; j <= 1; j++){
+				if(!(i==0 && j == 0)){
+					if(row+i >=0 && row+i <= values[0].length && column+j >= 0 && column+j <= values.length ){
+						System.out.println(values[row+i][column+j]);
+						count++;
+						sum += values[row+i][column+j];
+					}
 				}
 			}
 		}
-		return sum/9;
+		return sum/count;
 	}
  	public void print(){
  		for(int[] i:values){
