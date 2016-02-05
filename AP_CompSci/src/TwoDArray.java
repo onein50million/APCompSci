@@ -1,10 +1,15 @@
+import java.util.Arrays;
+
 
 public class TwoDArray {
 
 	public static void main(String[] args) {
-
-		int[][] test = {{0,1},{0,2},{0,2,5,3},{0,2,5,3}};
+		Object[] test = {"safsfssfs", 5435, 34.00, true};
+		if((boolean)test[3]){
+			System.out.println("woah");
+		}
 		
 	}
 
+	
 }
