@@ -27,7 +27,6 @@ public class Table {
 			for(int j = -1; j <= 1; j++){
 				if(!(i==0 && j == 0)){
 					if(row+i >=0 && row+i < values[0].length && column+j >= 0 && column+j < values.length ){
-						System.out.println(values[row+i][column+j]);
 						count++;
 						sum += values[row+i][column+j];
 					}
