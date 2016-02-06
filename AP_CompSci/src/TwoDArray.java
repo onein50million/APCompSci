@@ -4,10 +4,11 @@ public class TwoDArray {
 
 	public static void main(String[] args) {
 
-		System.out.println(Arrays.toString(withoutTen(new int[] { 32, 5453, 10, 434, 10 })));
-
+		Object[] test = {"safsfssfs", 5435, 34.00, true};
+		if((boolean)test[3]){
+			System.out.println("woah");
+		}
 	}
-
 	public  int[] withoutTen(int[] nums) {
 		int[] temp = nums.clone();
 		int tenCount = 0;
