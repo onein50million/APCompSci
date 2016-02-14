@@ -22,7 +22,7 @@ public class mazeTest {
 
 	private void printMaze(int playerX, int playerY){
 		for(int i = 0; i<width;i++){
-			if	
+//			if	
 		}
 	}
 	
