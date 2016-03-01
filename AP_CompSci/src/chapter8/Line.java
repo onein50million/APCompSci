@@ -49,6 +49,7 @@ public class Line {
 
 	public boolean isVertical() {
 		return b == 0;
+		
 	}
 
 	public boolean isHorizontal() {
