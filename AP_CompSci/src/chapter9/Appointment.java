@@ -1,6 +1,6 @@
 package chapter9;
 
-public class Appointment {
+public abstract class Appointment {
 	//y m d
 	public int[] date;
 	String descriptor;
