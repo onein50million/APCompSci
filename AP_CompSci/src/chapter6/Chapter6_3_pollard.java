@@ -84,7 +84,7 @@ public class Chapter6_3_pollard {
 			System.out.println(input / factor);
 			factor(input / factor, a, b);
 		}
-		// System.out.println(factor);
+		 System.out.println(factor);
 	}
 
 	public static long gcd(long value1, long value2) {
