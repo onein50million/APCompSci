@@ -1,6 +1,7 @@
 package chapter14;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 public class Chapter14{
@@ -29,25 +30,21 @@ class Chapter14_1{
 	
 }
 
-class InsertionSort
+class InsertionSort 
 {
 	public static <T extends Comparable<? super T>> void sort(T[] array){
-		List<T> sorted = new ArrayList<T>();
-		for(T item : array){
-			if(sorted.size() == 0){
-				sorted.add(item);
+		for(int i = 1; i<array.length; i++){
+			T comparator = array[i];
+			int j = i-1;
+			while(j >= 0 && comparator.compareTo(array[j])<0){
+				array[i] = array[j];
+				array[j] = comparator;
+				System.out.println(Arrays.toString(array));
+				j--;
+
 			}
-			for(int i = 0; i<sorted.size(); i++){
-				if(item.compareTo(sorted.get(i))<0){
-					sorted.add(item);
-				}
-			}
+			
 		}
-		for(int i = 0; i<array.length; i++){
-			array[i] = sorted.get(i);			
-		}
-		
-		
 	}
 	
 }
