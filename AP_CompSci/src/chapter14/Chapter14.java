@@ -1,11 +1,15 @@
 package chapter14;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 public class Chapter14{
 	public static void main(String[] args){
-//		new Chapter14_1();
-//		new Chapter14_2();
+		System.out.println("14-1");
+		new Chapter14_1();
+		System.out.println("14-1");
+		new Chapter14_2();
+		System.out.println("14-1");
 		new Chapter14_3();
 	}
 	
@@ -19,16 +23,17 @@ class Chapter14_3{
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter numbers with spaces");
 		String[] input = scanner.nextLine().split(" ");
-		scanner.close();
 		
 		Integer[] array = new Integer[input.length];
 		for(int i = 0; i<input.length; i++){
 			array[i] = Integer.parseInt(input[i]);
 		}
-		
-			for(int i : Remove.removeAll(array,10)){
-				System.out.print(i + ", ");
-			}
+		System.out.println("Enter the number you want to remove:");
+		for(int i : Remove.removeAll(array,scanner.nextInt())){
+			System.out.print(i + ", ");
+		}
+		scanner.close();
+
 		
 	}
 	
@@ -42,17 +47,16 @@ class Chapter14_2{
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter numbers with spaces");
 		String[] input = scanner.nextLine().split(" ");
-		scanner.close();
-		
 		Integer[] array = new Integer[input.length];
 		for(int i = 0; i<input.length; i++){
 			array[i] = Integer.parseInt(input[i]);
 		}
-		
-			for(int i : Remove.remove(array,10)){
-				System.out.print(i + ", ");
-			}
-		
+		System.out.println("Enter the number you want to remove:");
+		for(int i : Remove.remove(array,scanner.nextInt())){
+			System.out.print(i + ", ");
+		}
+		scanner.close();
+
 	}
 	
 }
@@ -80,26 +84,22 @@ class Remove{
 	}
 	public static Integer[] removeAll(Integer[] array, Integer value){
 		Integer index = -1;
-		Integer[] finalArray = new Integer[array.length-1];
-		for(int i = 0; i < array.length; i++){
-			if(array[i] == value){
-				index = i;
-				System.out.println(index);
-				for(int j = 0; j < index; j++){
-					finalArray[j] = array[j];
-				}
-				for(int j = index; j < finalArray.length; j++){
-					finalArray[j] = array[j+1]; 
-				}
-				array = finalArray.clone();
-
+		Integer[] finalArray = array.clone();
+		InsertionSort.sort(finalArray);
+		for(index = BinarySearcher.search(finalArray, 0, finalArray.length, value); index != -1;
+			index = BinarySearcher.search(finalArray, 0, finalArray.length, value)){
+			System.out.println(index);
+			for(int i = index; i < finalArray.length-1; i++){
+				finalArray[i] = finalArray[i+1]; 
 			}
-			
+			Integer[] temp = new Integer[finalArray.length-1];
+			for(int i = 0; i<temp.length;i++){
+				temp[i] = finalArray[i];
+			}
+			finalArray = temp;
+			System.out.println(Arrays.toString(finalArray));
 		}
-
-		if(index == -1){
-			return array;
-		}
+		
 		return finalArray;
 	}
 }
