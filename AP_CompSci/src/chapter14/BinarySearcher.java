@@ -14,7 +14,7 @@ public class BinarySearcher
       @return the index at which the value occurs, or -1
       if it does not occur in the array
    */
-   public static int search(int[] a, int low, int high, int value)
+   public static int search(Integer[] a, int low, int high, int value)
    {  
       if (low <= high)
       {
