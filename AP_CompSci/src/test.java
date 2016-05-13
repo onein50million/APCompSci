@@ -1,13 +1,10 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.math.BigInteger;
+import java.util.Arrays;
 
-public class test{
+public class test {
 
-	public static void main(String[] args){
-	}
+	public static void main(String[] args) {
 	
+		boolean[][] test = new boolean[5][5];
+		System.out.println(test[3][3]);
+	}
 }
