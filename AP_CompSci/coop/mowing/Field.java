@@ -8,7 +8,7 @@ public class Field {
 	private int[][] field;
 	static final int GRASS = 0;
 	static final int TREE = 1;
-	static final int ACCESS = 2;
+	static final int MOWED = 2;
 	static final int STOP = 3;
 
 	// True for tree, false if grass
@@ -44,7 +44,7 @@ public class Field {
 			return "❤";
 		if(i == STOP)
 			return "☎";
-		if(i == ACCESS)
+		if(i == MOWED)
 			return "✳";
 		else
 			return " ";
@@ -110,20 +110,24 @@ public class Field {
 				if(row+r < 0 || row+r >= field.length || column+c <0 || column+c >= field[0].length)
 					continue;
 				if(field[row+r][column+c] == GRASS){
-					field[row+r][column+c] = ACCESS;
+					field[row+r][column+c] = MOWED;
 					searcher(row+r,column+c,boundaries);
 				}
-//				if(field[row+r][column+c] == STOP){
-//					if(boundaries>0){
-//						continue;
-//					}
-//					boundaries++;
-//					field[row+r][column+c] = ACCESS;
-//					searcher(row+r,column+c,boundaries);
-//
-//				}
 			}
 		}
+	}
+	
+	public void mowAdjacent(){
+		for(int row = 0; row < field.length; row++){
+			for(int column = 0; column < field[0].length; column++){
+				
+			}
+		}
+	}
+	
+	public void mow(int row, int column){
+		searcher(row, column, 0);
+		
 	}
 }
 

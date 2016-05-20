@@ -12,7 +12,7 @@ public class Main {
 		int totalPar = 0;
 		int totalScore = 0;
 		while(true){
-			String line =  scanner.nextLine();
+			String line = scanner.nextLine();
 			if(line.equals("")){
 				break;
 			}
@@ -24,19 +24,21 @@ public class Main {
 			int difference = score-par;
 			totalPar += par;
 			totalScore += score;
-			if(difference == -1){			
+			if(difference == -1){				
 				System.out.println("birdie");
 			}else if(difference == -2){
 				System.out.println("eagle");
 			}else if(difference == 1){
 				System.out.println("bogey");
-			}else if(difference == 1){
+			}else if(difference == 2){
 				System.out.println("double bogey");
 			}
 		}
 		
 		if(totalPar - totalScore >=0)
-		System.out.printf("%d over par");
+			System.out.printf("%d under par",totalPar-totalScore);
+		if(totalPar - totalScore < 0)	
+			System.out.printf("%d over par", Math.abs(totalPar-totalScore));
 	}
 
 }
